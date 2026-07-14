@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>توقعات الذكاء الاصطناعي – إيداع</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .console-box {
+      font-family: monospace;
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 20px #00ff88;
+      color: #00ff88;
+      height: 250px;
+      overflow-y: auto;
+    }
+    .loading-screen {
+      font-family: monospace;
+      background: #000;
+      color: #00ff88;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+      z-index: 50;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .hidden-screen { display: none; }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <div id="loading" class="loading-screen">
+    <p>رانا نشارجيو... استنى شوية نوجدو الحالة.</p>
+  </div>
+  <div id="mainContent" class="hidden-screen">
+    <header class="w-full bg-gray-800 p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-green-400">توقعات 1xBet بالذكاء الاصطناعي</h1>
+      <nav class="space-x-4 space-x-reverse">
+        <a href="#how" class="hover:text-green-400">كيفاش تمشي</a>
+        <a href="#games" class="hover:text-green-400">لي جو (الألعاب)</a>
+        <a href="#start" class="hover:text-green-400">أبدا درك</a>
+      </nav>
+    </header>
+    <section class="min-h-screen flex flex-col items-center justify-center px-4 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">
+        اربح دراهم صح مع توقعات الذكاء الاصطناعي تاع لي جو
+      </h2>
+      <div class="mb-4 text-lg font-semibold text-yellow-300">
+        👋 مرحبا بيك في السيرفيس أوفيسيال تاع <span class="text-green-400">أحمد عبد الرحمن</span>!
+      </div>
+      <p class="max-w-xl mb-8 text-gray-300">
+        التحق بآلاف لي جوار لي راهم يدخلو دراهم كل يوم بالذكاء الاصطناعي تاعنا في لي جو Aviator، Mines و Penalty. نسبة النجاح 98%، توقعات في وقتها وتريتي دراهمك (retrait) سيرپلاص!
+      </p>
+      <input id="userId" type="text" placeholder="دخل الآي دي (ID) تاعك في 1xBet" class="bg-gray-700 text-white p-3 rounded-md mb-4 text-center" />
+      <button id="connectButton" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-xl text-lg transition">اربط الكونط تاعك</button>
+      <div id="connectionSuccess" class="hidden text-green-400 font-bold mt-6">
+        <p>رقم الكونط: <span id="accountIdDisplay" dir="ltr">1234567890</span> تربط بيان!</p>
+        <p>الحالة: أكتيف | دقة التوقع 100% | تم تحليل الخوارزميات</p>
+        <button id="getSignalButton" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition mt-4">أدي السينيال</button>
+      </div>
+      <div id="errorBox" class="hidden bg-red-600 p-6 rounded-xl max-w-md mx-auto mt-6">
+        <h2 class="text-xl font-bold mb-2">⚠️ مالقينا حتى ديبو (Dépôt)</h2>
+        <p class="mb-4">الكونط تاعك راهو فارغ (زيرو). دير ديبو بمبلغ <strong>1500 دينار جزائري ولا كثر</strong> باش تفتح لي سينيال وتبدا دخل الدراهم.</p>
+        <a href="https://reffpa.com/L?tag=d_5841666m_18609c_&site=5841666&ad=18609&r=registration" target="_blank" id="depositButton" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition">
+          دير ديبو درك في 1xBet
+        </a>
+        <div class="mt-6 bg-red-800 text-white p-4 rounded-lg font-bold text-center">
+          <div class="mb-1 text-lg">البروموكود تاعك: <span class="bg-black p-1 rounded text-green-400" dir="ltr">ALR888</span></div>
+          <div>حاجة مهمة بزاف، سجل <span class="underline">غير</span> بهاد الكود باش يتفتحولك قاع لي زوبسيون!</div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-800 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-6">أرباح الرابحين تاع اليوم (بالدينار الجزائري)</h3>
+      <div class="grid md:grid-cols-2 gap-4 text-right max-w-4xl mx-auto text-sm text-green-300" dir="ltr">
+      <p class="text-right">👤 المستخدم: 1218473422 – 265,000 د.ج</p>
+      <p class="text-right">👤 المستخدم: 9912384741 – 230,000 د.ج</p>
+      <p class="text-right">👤 المستخدم: 3099234822 – 150,000 د.ج</p>
+      <p class="text-right">👤 المستخدم: 1187339121 – 105,000 د.ج</p>
+      <p class="text-right">👤 المستخدم: 4412900113 – 135,000 د.ج</p>
+      <p class="text-right">👤 المستخدم: 8283721091 – 195,000 د.ج</p>
+      <p class="text-right">👤 المستخدم: 7751937742 – 112,000 د.ج</p>
+      <p class="text-right">👤 المستخدم: 5554921811 – 98,000 د.ج</p>
+      <p class="text-right">👤 المستخدم: 1983238742 – 84,000 د.ج</p>
+      <p class="text-right">👤 المستخدم: 3377749301 – 75,000 د.ج</p>
+      </div>
+    </section>
+    <section id="games" class="bg-gray-800 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-6">لي جو لي كاينين (الألعاب)</h3>
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold mb-2">🎮 الطيارة (Aviator)</h4>
+          <p class="text-gray-300">توقع الوقت المليح باش تجبد دراهمك قبل ما تطير الطيارة. الذكاء الاصطناعي يكتشف السيستام في الوقت الحقيقي.</p>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold mb-2">💣 المين (Mines)</h4>
+          <p class="text-gray-300">إيفيتي القنابل وجبد دراهمك. السيستام تاعنا يلقالك الطريق السيف (safe) باش تربح الماكسيموم.</p>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold mb-2">🥅 بيلانتيات (Penalty)</h4>
+          <p class="text-gray-300">اعرف وين تشوتي ولا وين يبلونجي القارديان. اربح القارديان بتوقعات مخدومة على تحليل الداتا.</p>
+        </div>
+      </div>
+    </section>
+    <section id="how" class="bg-gray-900 py-12 px-6 text-center">
+      <h3 class="text-2xl font-bold text-green-400 mb-6">كيفاش تمشي</h3>
+      <div class="max-w-3xl mx-auto space-y-4 text-gray-300 text-right">
+        <p>📡 الذكاء الاصطناعي يأناليزي الداتا تاع لي جو القديمة والمباشرة 24/24 و 7/7.</p>
+        <p>💡 يحدد لي سيستام لي تضمنلك دخل دراهم ديما ومضمونة.</p>
+        <p>📲 يوصلوك لي سينيال موثوقين في وقتهم ديريكت للتليفون ولا الميكرو تاعك.</p>
+      </div>
+    </section>
+    <section class="bg-black py-12 px-6 text-center">
+      <h3 class="text-xl font-bold text-green-400 mb-4">[ وحدة التحكم – سجل المراقبة ]</h3>
+      <div class="console-box max-w-3xl mx-auto text-right" id="console" dir="ltr">
+        <p class="text-left">[INFO] سيرفيس التوقعات راه يمشي بيان ✅</p>
+      </div>
+    </section>
+    <footer class="text-center text-gray-500 text-sm py-6">
+      © 2025 توقعات الذكاء الاصطناعي. ماعندهاش علاقة بـ 1xBet. ألعب بمسؤولية.
+    </footer>
+  </div>
+  <script>
+    setTimeout(() => {
+      document.getElementById("loading").classList.add("hidden-screen");
+      document.getElementById("mainContent").classList.remove("hidden-screen");
+    }, 3000);
+
+    document.getElementById("connectButton").addEventListener("click", () => {
+      const userId = document.getElementById("userId").value;
+      if (userId) {
+        document.getElementById("accountIdDisplay").innerText = userId;
+        document.getElementById("connectionSuccess").classList.remove("hidden");
+        document.getElementById("errorBox").classList.add("hidden");
+      }
+    });
+
+    document.getElementById("getSignalButton").addEventListener("click", () => {
+      document.getElementById("errorBox").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
